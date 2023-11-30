@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development</title>
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="FontAwesome6.2.0/css/all.min.css">
+</head>
+<header>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            color: black;
+            text-align: center;
+        }
+
+        h1,
+        h2,
+        p {
+            margin-bottom: 15px;
+        }
+
+        .project {
+            margin-bottom: 30px;
+        }
+        img {
+            max-width: 50%;
+            height: auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        tr,td {
+            border: 1px solid black;
+            text-align: left;
+            padding: 8px;
+        }
+
+    </style>
+    </header>
+<body>
+    <header>
+        <nav>
+            <div class="Logo"><b><i>Welcome to my website codecamp#16</i></b></div>
+            <ul>
+              <li><a href="home.html">HOME</a></li>
+              <li><a href="about.html">ABOUT</a></li>
+              <li><a href="education.html">EDUCATION</a></li>
+              <li><a href="work.html">WORK</a></li>
+              <li><a href="contact.html">CONTACT</a></li>
+              <li><a href="refer.html">HOW</a></li>
+              <li><a href="END.html">END</a></li>
+            </ul>
+            <div class="toggle"></div>
+        </nav>
+    </header>
+    <script src="jQuery/jQuery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.toggle').click(function(){
+                $('.toggle').toggleClass('active');
+                $('ul').toggleClass('active');
+            })
+        })
+    </script>
+<br>
+<header>
+    <h1>Education</h1>
+    <img src="https://www.svgrepo.com/show/382151/education-graduation-learning-school-study.svg" alt="">
+</header>
+    <table class="edu1">
+        <tr>
+            <td colspan="2"><b> Year </b></td>
+            <td rowspan="2"><b> School </b></td>
+        </tr>
+        <tr>
+            <td><b> from </b></td>
+            <td><b> to </b></td>
+        </tr>
+        <tr>
+        <td>2017</td>
+        <td>2021</td>
+        <td>มหาวิทยาลัยหอการค้าไทย UTCC</td>
+        </tr>
+        <tr>
+            <td>2014</td>
+            <td>2016</td>
+            <td>วิทยาลัยอาชีวศึกษาสันติราษฏร์ SIBA</td>
+            </tr>
+            <tr>
+                <td>2011</td>
+                <td>2013</td>
+                <td>โรงเรียนสามเสนนอก</td>
+                </tr>
+    </table>
+</body>
+</html>

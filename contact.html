@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development</title>
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="FontAwesome6.2.0/css/all.min.css">
+</head>
+<body>
+    <header style="z-index: 100;">
+        <nav>
+            <div class="Logo"><b><i>Welcome to my website codecamp#16</i></b></div>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="education.html">EDUCATION</a></li>
+                <li><a href="work.html">WORK</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="refer.html">HOW</a></li>
+                <li><a href="END.html">END</a></li>
+            </ul>
+            <div class="toggle"></div>
+        </nav>
+    </header>
+    <script src="jQuery/jQuery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.toggle').click(function(){
+                $('.toggle').toggleClass('active');
+                $('ul').toggleClass('active');
+            })
+        })
+    </script>
+    <header-contact style="z-index: 10;">
+            <nav>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/sanhanat.kaewjinda/">
+                                <i class="fa-brands fa-facebook"></i>
+                                <span> Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/dszone.sk/">
+                                <i class="fa-brands fa-instagram"></i>
+                                <span> Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/FlukeSK">
+                                <i class="fa-brands fa-github"></i>
+                                <span> Github</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://discord.com/channels/@me">
+                                <i class="fa-brands fa-discord"></i>
+                                <span> Discord</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+    </header-contact>
+</body>
+</html>

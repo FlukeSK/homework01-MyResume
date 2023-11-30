@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development</title>
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="FontAwesome6.2.0/css/all.min.css">
+</head>
+    <header>
+        <nav>
+            <div class="Logo"><i>Welcome to my website codecamp#16</i></div>
+            <ul>
+              <li><a href="home.html">HOME</a></li>
+              <li><a href="about.html">ABOUT</a></li>
+              <li><a href="education.html">EDUCATION</a></li>
+              <li><a href="work.html">WORK</a></li>
+              <li><a href="contact.html">CONTACT</a></li>
+              <li><a href="refer.html">HOW</a></li>
+              <li><a href="END.html">END</a></li>
+            </ul>
+            <div class="toggle"></div>
+        </nav>
+    </header>
+    <script src="jQuery/jQuery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.toggle').click(function(){
+                $('.toggle').toggleClass('active');
+                $('ul').toggleClass('active');
+            })
+        })
+    </script>
+    <header>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: url("https://images.unsplash.com/photo-1495360010541-f48722b34f7d?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            color: black;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px 10px 10px 10px;
+        }
+
+    </style>
+    </header>
+<body>
+    <br>
+    <header>
+        <h1>Sanhanat Kaewjinda</h1>
+        <h3>Full Stack Web Developer</h3>
+    </header>
+    <br>
+        <div class="pur">
+            <img src="me.png" alt="Description of the image">
+        </div>
+        <br>
+        <div class="container">
+            <div class="tab_box">
+                <button class="tab_btn">About Me</button>
+                <button class="tab_btn">Personal</button>
+                <button class="tab_btn">Skills</button>
+                <div class="line"></div>
+            </div>
+            <div class="content_box">
+                <div class="content">
+                    <h2>About Me</h2>
+                    <p>Welcome to my work! I'm a new and enthusiastic web developer and want to get better experience building websites.</p>
+                </div>
+
+                <div class="content">
+                    <h2>Personal Info</h2>
+                    <p>Location : Bangkok, Thailand</p>
+                    <p>Phone : 099-519-9198</p>
+                    <p>E-Mail : dszoneworkforme@gmail.com</p>
+                    <p>Line ID : 0995199198</p>
+                </div>
+
+                <div class="content">
+                    <h2>Skills</h2>
+                    <p>• HTML</p>
+                    <p>• CSS</p>
+                    <p>• Git</p>
+                    <p>• JAVAScript</p>
+                    <p>• Rect.JS</p>
+                    <p>• Node.JS</p>
+                    <p>• MySQL</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            const tabs= document.querySelectorAll(".tab_btn");
+            const all_content= document.querySelectorAll(".content");
+
+            tabs.forEach((tab, index)=>{
+                tab.addEventListener("click", (e)=>{ 
+                    tabs.forEach(tab=>{tab.classList.remove("active"); }) 
+                    tab.classList.add("active"); 
+
+                var line=document.querySelector(".line");
+                line.style.width = e.target.offsetWidth + "px";
+                line.style.left = e.target.offsetLeft + "px";
+
+                all_content.forEach(content=>{content.classList.remove("active")});
+                all_content[index].classList.add("active");
+                })
+            });
+        </script>
+</body>
+</html>
