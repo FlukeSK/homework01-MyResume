@@ -53,9 +53,9 @@
 <body>
     <header>
         <nav>
-            <div class="Logo"><b><i>Welcome to my website codecamp#16</i></b></div>
+            <div class="Logo"><b><i>Welcome to my website resume</i></b></div>
             <ul>
-              <li><a href="#">HOME</a></li>
+              <li><a href="index.html">HOME</a></li>
               <li><a href="about.html">ABOUT</a></li>
               <li><a href="education.html">EDUCATION</a></li>
               <li><a href="work.html">WORK</a></li>
@@ -80,30 +80,51 @@
     <h1>Education</h1>
     <img src="https://www.svgrepo.com/show/382151/education-graduation-learning-school-study.svg" alt="">
 </header>
-    <table class="edu1">
-        <tr>
-            <td colspan="2"><b> Year </b></td>
-            <td rowspan="2"><b> School </b></td>
-        </tr>
-        <tr>
-            <td><b> from </b></td>
-            <td><b> to </b></td>
-        </tr>
-        <tr>
-        <td>2017</td>
-        <td>2021</td>
-        <td>มหาวิทยาลัยหอการค้าไทย UTCC</td>
-        </tr>
-        <tr>
-            <td>2014</td>
-            <td>2016</td>
-            <td>วิทยาลัยอาชีวศึกษาสันติราษฏร์ SIBA</td>
-            </tr>
-            <tr>
-                <td>2011</td>
-                <td>2013</td>
-                <td>โรงเรียนสามเสนนอก</td>
-                </tr>
-    </table>
+    <div class="container">
+        <div class="tab_box">
+            <button class="tab_btn">School</button>
+            <button class="tab_btn">Language</button>
+            <div class="line"></div>
+        </div>
+        <div class="content_box">
+            <div class="content">
+                <br>
+                <li>2011 - 2013</li>
+                <p> โรงเรียนสามเสนนอก (Samsen Nok School) </p>
+                <li>2014 - 2016</li>
+                <p>วิทยาลัยอาชีวศึกษาสันติราษฏร์ (SIBA College)
+                <br>สาขา คอมพิวเตอร์ธุรกิจ (Business Computer) </p>
+                <li>2017 - 2020</li>
+                <p>มหาวิทยาลัยหอการค้าไทย (UTCC) <br>คณะ นิเทศศาสตร์ สาขา ภาพยนตร์ดิจิทัล (Digital Film) </p>
+                <li>2023 - 2024</li>
+                <p>Software Park CodeCamp <br>คอร์ส Full Stack Web Developer</p>
+            </div>
+
+            <div class="content">
+                <br>
+                <li> Thai : Native </li>
+                <li> English : Beginner</li>
+            </div>
+        </div>
+    </div>
+    <script>
+        const tabs= document.querySelectorAll(".tab_btn");
+        const all_content= document.querySelectorAll(".content");
+
+        tabs.forEach((tab, index)=>{
+            tab.addEventListener("click", (e)=>{ 
+                tabs.forEach(tab=>{tab.classList.remove("active"); }) 
+                tab.classList.add("active"); 
+
+            var line=document.querySelector(".line");
+            line.style.width = e.target.offsetWidth + "px";
+            line.style.left = e.target.offsetLeft + "px";
+
+            all_content.forEach(content=>{content.classList.remove("active")});
+            all_content[index].classList.add("active");
+            })
+        });
+    </script>
+    <br>
 </body>
 </html>

@@ -11,9 +11,9 @@
 <body>
     <header>
         <nav>
-            <div class="Logo"><b><i>Welcome to my website codecamp#16</i></b></div>
+            <div class="Logo"><b><i>Welcome to my website resume</i></b></div>
             <ul>
-              <li><a href="#">HOME</a></li>
+              <li><a href="index.html">HOME</a></li>
               <li><a href="about.html">ABOUT</a></li>
               <li><a href="education.html">EDUCATION</a></li>
               <li><a href="work.html">WORK</a></li>
@@ -79,27 +79,83 @@
         <h1>Work</h1>
         <img src="https://www.svgrepo.com/show/206821/briefcase-bag.svg" alt="">
     </header>
-        <table class="work">
-            <tr>
-                <td><b> Year </b></td>
-                <td><b> Job Title </b></td>
-                <td><b> Company </b></td>
-            </tr>
-            <tr>
-                <td>2023</td>
-                <td>Caturday Cat Cafe</td>
-                <td>Caturday</td>
-                </tr>
-                <tr>
-                    <td>2020</td>
-                    <td>SF Cinema</td>
-                    <td>SF CORPORATION PUBLIC COMPANY LIMITED</td>
-                    </tr>
-            <tr>
-            <td>2019</td>
-            <td>Pizza Company</td>
-            <td>The Pizza Company</td>
-            </tr>
-        </table>
+
+        <div class="container">
+            <div class="tab_box">
+                <button class="tab_btn">2015</button>
+                <button class="tab_btn">2018</button>
+                <button class="tab_btn">2019</button>
+                <button class="tab_btn">2021</button>
+                <button class="tab_btn">2023</button>
+                <button class="tab_btn">2024</button>
+                <div class="line"></div>
+            </div>
+            <div class="content_box">
+                <div class="content">
+                    <h2>Adminstrative Officer</h2>
+                    <li>Accounting Department</li>
+                    <p>Working in the accounting department about the insurance company.</p>
+                </div>
+    
+                <div class="content">
+                    <h2>Short film</h2>
+                    <li>Backstage, Editor</li>
+                    <p>Working behind the scenes, editing and helping with camera views.</p>
+                    <a href="https://drive.google.com/file/d/1v6EzGiio3xabQFVI7ayYQQKpObnuVAar/view?usp=share_link">Portfolio</a>
+                </div>
+
+<div class="content">
+<h2>The Pizza Company</h2>
+<li>Delivery driver</li>
+<p>Deliver pizzas according to the orders received from the store and clean up the restaurant after closing.</p>
+</div>
+
+                <div class="content">
+                    <h2>SF Corporation Public Company Limited</h2>
+                    <li>Projectionist</li>
+                    <p>Take care of the movie projector, be responsible for scheduling movies in<br>
+                    the cinema, and control the lighting system in the cinema.</p>
+                </div>
+
+                <div class="content">
+                    <h2>Caturday Cat Cafe</h2>
+                    <li>Service staff in the cafe and talking care of cats.</li>
+                    <p>Responsible for welcoming, taking orders and serving foods or drinks.</p>
+                    <br>
+                    <h2>Full Stack Developer Trainee</h2>
+                    <li>Personal project</li>
+                    <p>website Caturday Cat Cafe</p>
+                    <br>
+                    <li>Group project</li>
+                    <p>A game store platform</p>
+
+                </div>
+
+                <div class="content">
+                    <h2>Advanced Info Service</h2>
+                    <li>Direct Sales Representative</li>
+                </div>
+            </div>
+        </div>
+        <script>
+            const tabs= document.querySelectorAll(".tab_btn");
+            const all_content= document.querySelectorAll(".content");
+    
+            tabs.forEach((tab, index)=>{
+                tab.addEventListener("click", (e)=>{ 
+                    tabs.forEach(tab=>{tab.classList.remove("active"); }) 
+                    tab.classList.add("active"); 
+    
+                var line=document.querySelector(".line");
+                line.style.width = e.target.offsetWidth + "px";
+                line.style.left = e.target.offsetLeft + "px";
+    
+                all_content.forEach(content=>{content.classList.remove("active")});
+                all_content[index].classList.add("active");
+                })
+            });
+        </script>
+        <br>
+
 </body>
 </html>
