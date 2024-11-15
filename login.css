@@ -28,6 +28,11 @@
     font-size: 4rem;
     margin-bottom: 10px;
 }
+
+.development-page h1:hover {
+    color: rgb(248, 24, 248);
+}
+
 .development-page p {
     font-size: 1.75rem;
     white-space: nowrap;
@@ -151,6 +156,10 @@ hr {
     font-size: 1.063rem;
     font-weight: 600;
     transition: 0.2s ease;
+}
+
+.button a:hover {
+    background: rgb(41, 247, 68);
 }
 
 @media (max-width: 900px) {

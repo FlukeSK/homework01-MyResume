@@ -329,7 +329,10 @@ padding-left: 570px;
   padding: 30px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, .1);
   border-radius: 20px;
-  margin-left: 27%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
 }
 
 .tab_box {
