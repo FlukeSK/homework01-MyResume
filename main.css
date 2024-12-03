@@ -10,6 +10,7 @@ header
     width: 100%;
     max-width: 1050px;
     margin: 0 auto;
+    background: transparent;
 }
 nav
 {
@@ -20,6 +21,7 @@ nav
     justify-content: space-between;
     background-color: white;
     z-index: 200;
+    border-radius: 6px;
 }
 nav ul
 {
