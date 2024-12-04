@@ -37,6 +37,8 @@
     font-size: 1.75rem;
     white-space: nowrap;
 }
+
+
 form {
     display: flex;
     flex-direction: column;
@@ -46,6 +48,7 @@ form {
     max-width: 400px;
     width: 100%;
 }
+
 form input {
     height: 55px;
     width: 100%;
